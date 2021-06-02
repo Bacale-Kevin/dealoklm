@@ -8,6 +8,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
+import Link from "next/link";
 import Typography from "@material-ui/core/Typography";
 import { Container, Grid } from "@material-ui/core";
 import { red, green } from "@material-ui/core/colors";
@@ -125,9 +126,8 @@ export default function BonPlan() {
           margin={50}
           stagePadding={40}
           slideBy={1}
-          autoplayTimeou={3000}
-          // autoplayHoverPause
-          
+          autoplayTimeout={3000}
+          autoplayHoverPause
           dots
           navText={[
             '<i class="fas fa-arrow-left" style="position: absolute; left: -2rem; bottom: 22rem; "></i>',
@@ -166,14 +166,18 @@ export default function BonPlan() {
                 </Typography>
               </Grid>
               <Grid item style={{ padding: "2.2rem" }}>
-                <Button
-                  variant="contained"
-                  size="mediumm"
-                  color="primary"
-                  className={classes.button}
-                >
-                  En savoir plus
-                </Button>
+                <Link href="/bon_plan_bank">
+                  <a>
+                    <Button
+                      variant="contained"
+                      size="mediumm"
+                      color="primary"
+                      className={classes.button}
+                    >
+                      En savoir pluss
+                    </Button>
+                  </a>
+                </Link>
               </Grid>
             </Grid>
           </Card>
