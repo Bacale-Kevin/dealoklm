@@ -1,10 +1,14 @@
 import React from 'react'
+import HeroSectionBank from 'components/bon-plan-bank/HeroSectionBank';
+
+
+
 
 const BonPlanBank = () => {
     return (
-        <div>
-            Bon plan
-        </div>
+        <>
+            <HeroSectionBank />
+        </>
     )
 }
 

@@ -15,3 +15,55 @@ a {
   box-sizing: border-box;
 }
 
+
+.plan-card {
+	position: relative;
+	background: #fff;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	box-shadow: 0 3px 5px rgba(0,0,0,.075);
+	/* margin: 20px; */
+  /* width: 2em; */
+  max-width: 23em;
+}
+
+.plan-card:hover .plan-logo img {
+	transform: scale(1.08);
+}
+
+.plan-logo{
+  padding-top: 2rem;
+  min-height: 250px;
+}
+.plan-card .plan-logo {
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+}
+
+.plan-card .plan-logo::after {
+	content: '';
+	position: absolute;
+  display: block;
+	bottom: 0px;
+  top: 210px;
+  margin-top: 8px;
+  left: 65px;
+	height: 1px;
+	width: 50%;
+  transform: scaleX(1); 
+	background: #ebebeb;
+	transition: all 1s ease-in-out;
+}
+
+.plan-card:hover .plan-logo::after {
+	height: 1px;
+	/* width: 100%; */
+  transform: scaleX(2); 
+	background: rgba(0, 157, 224, 0.5);
+}
+
+.plan-card .plan-logo img {
+	width: 150px;
+	transition: all 0.2s ease-in-out;
+}
