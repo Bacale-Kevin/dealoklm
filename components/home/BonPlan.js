@@ -166,18 +166,16 @@ export default function BonPlan() {
                 </Typography>
               </Grid>
               <Grid item style={{ padding: "2.2rem" }}>
-                <Link href="/bon_plan_bank">
-                  <a>
-                    <Button
-                      variant="contained"
-                      size="mediumm"
-                      color="primary"
-                      className={classes.button}
-                    >
-                      En savoir pluss
-                    </Button>
-                  </a>
-                </Link>
+                <Button
+                  variant="contained"
+                  size="mediumm"
+                  color="primary"
+                  className={classes.button}
+                >
+                  <Link href="/bon_plan_bank">
+                    <a>En savoir plus</a>
+                  </Link>
+                </Button>
               </Grid>
             </Grid>
           </Card>
