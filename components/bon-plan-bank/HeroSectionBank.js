@@ -4,6 +4,8 @@ import { Button, Container, Grid, Typography } from "@material-ui/core";
 import Layout from "components/layout/Layout";
 import Fade from "react-reveal/Fade";
 import Image from "next/image";
+import { dummyData } from "./dummyData";
+import CardBank from "./CardBank";
 
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
@@ -54,7 +56,7 @@ const HeroSectionBank = () => {
               component="h1"
               className={classes.heroTitle}
             >
-              BON PLAN BANQUe
+              BON PLAN BANQUE
             </Typography>
           </Fade>
         </Container>
@@ -63,317 +65,18 @@ const HeroSectionBank = () => {
       {/* bank card */}
       <Container
         maxWidth="xl"
-        classsName="card-section"
+        className="card-section"
         style={{ backgroundColor: "#FBFFFF", marginTop: "-14rem" }}
       >
-      <Fade delay={500} duration={2000} bottom>
-        <Container className="container" maxWidth="md">
-          <Grid container justify="center" spacing={8} alignItems="center">
-            {/* 1 */}
-            <Grid
-              item
-              md={4}
-              xs={12}
-              sm={6}
-              style={{
-                textAlign: "center",
-                justifyContent: "center",
-                display: "flex",
-              }}
-            >
-                <Grid
-                  component="div"
-                  container
-                  direction="column"
-                  className="plan-card"
-                >
-                  <Grid item className="plan-logo">
-                    <img
-                      src="/images/boursorama_banque_carre.png"
-                      alt="boursorama_banque"
-                    />
-                  </Grid>
-                  <Grid item>
-                    <Typography
-                      variant="h4"
-                      component="h2"
-                      align="center"
-                      style={{
-                        marginTop: "1rem",
-                        fontWeight: 500,
-                        fontSize: "1.5rem",
-                        color: "#17a2b8",
-                      }}
-                    >
-                      Bon plan bank name
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography
-                      variant="body1"
-                      align="center"
-                      style={{ margin: "16px 0px" }}
-                    >
-                      Lorem ipsum small descritpion
-                    </Typography>
-                  </Grid>
-                  <Grid item style={{ paddingBottom: "3rem" }}>
-                    <Button variant="contained" color="primary">
-                      Consulter le plan
-                    </Button>
-                  </Grid>
-                </Grid>
+        <Fade delay={500} duration={2000} bottom>
+          <Container className="container" maxWidth="md">
+            <Grid container justify="center" spacing={8} alignItems="center">
+              {dummyData.map((card) => (
+                <CardBank key={card.id} card={card} />
+              ))}
             </Grid>
-            {/* 2 */}
-            <Grid
-              item
-              md={4}
-              xs={12}
-              sm={6}
-              style={{
-                textAlign: "center",
-                justifyContent: "center",
-                display: "flex",
-              }}
-            >
-              <Grid container direction="column" className="plan-card">
-                <Grid item className="plan-logo">
-                  <img
-                    src="/images/logo-facebook.png"
-                    alt="boursorama_banque"
-                  />
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="h4"
-                    component="h2"
-                    align="center"
-                    style={{
-                      marginTop: "1rem",
-                      fontWeight: 500,
-                      fontSize: "1.5rem",
-                      color: "#17a2b8",
-                    }}
-                  >
-                    Bon plan bank name
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="body1"
-                    align="center"
-                    style={{ margin: "16px 0px" }}
-                  >
-                    Lorem ipsum small descritpion
-                  </Typography>
-                </Grid>
-                <Grid item style={{ paddingBottom: "3rem" }}>
-                  <Button variant="contained" color="primary">
-                    Consulter le plan
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid>
-            {/* 3 */}
-            <Grid
-              item
-              md={4}
-              xs={12}
-              sm={6}
-              style={{
-                textAlign: "center",
-                justifyContent: "center",
-                display: "flex",
-              }}
-            >
-              <Grid container direction="column" className="plan-card">
-                <Grid item className="plan-logo">
-                  <img src="/images/unnamed.png" alt="boursorama_banque" />
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="h4"
-                    component="h2"
-                    align="center"
-                    style={{
-                      marginTop: "1rem",
-                      fontWeight: 500,
-                      fontSize: "1.5rem",
-                      color: "#17a2b8",
-                    }}
-                  >
-                    Bon plan bank name
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="body1"
-                    align="center"
-                    style={{ margin: "16px 0px" }}
-                  >
-                    Lorem ipsum small descritpion
-                  </Typography>
-                </Grid>
-                <Grid item style={{ paddingBottom: "3rem" }}>
-                  <Button variant="contained" color="primary">
-                    Consulter le plan
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid>
-
-            {/* 4 */}
-            <Grid
-              item
-              md={4}
-              xs={12}
-              sm={6}
-              style={{
-                textAlign: "center",
-                justifyContent: "center",
-                display: "flex",
-              }}
-            >
-              <Grid container direction="column" className="plan-card">
-                <Grid item className="plan-logo">
-                  <img
-                    src="/images/logo-facebook.png"
-                    alt="boursorama_banque"
-                  />
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="h4"
-                    component="h2"
-                    align="center"
-                    style={{
-                      marginTop: "1rem",
-                      fontWeight: 500,
-                      fontSize: "1.5rem",
-                      color: "#17a2b8",
-                    }}
-                  >
-                    Bon plan bank name
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="body1"
-                    align="center"
-                    style={{ margin: "16px 0px" }}
-                  >
-                    Lorem ipsum small descritpion
-                  </Typography>
-                </Grid>
-                <Grid item style={{ paddingBottom: "3rem" }}>
-                  <Button variant="contained" color="primary">
-                    Consulter le plan
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid>
-
-            {/* 5 */}
-            <Grid
-              item
-              md={4}
-              xs={12}
-              sm={6}
-              style={{
-                textAlign: "center",
-                justifyContent: "center",
-                display: "flex",
-              }}
-            >
-              <Grid container direction="column" className="plan-card">
-                <Grid item className="plan-logo">
-                  <img src="/images/unnamed.png" alt="boursorama_banque" />
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="h4"
-                    component="h2"
-                    align="center"
-                    style={{
-                      marginTop: "1rem",
-                      fontWeight: 500,
-                      fontSize: "1.5rem",
-                      color: "#17a2b8",
-                    }}
-                  >
-                    Bon plan bank name
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="body1"
-                    align="center"
-                    style={{ margin: "16px 0px" }}
-                  >
-                    Lorem ipsum small descritpion
-                  </Typography>
-                </Grid>
-                <Grid item style={{ paddingBottom: "3rem" }}>
-                  <Button variant="contained" color="primary">
-                    Consulter le plan
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid>
-
-            {/* 1 */}
-            <Grid
-              item
-              md={4}
-              xs={12}
-              sm={6}
-              style={{
-                textAlign: "center",
-                justifyContent: "center",
-                display: "flex",
-              }}
-            >
-              <Grid container direction="column" className="plan-card">
-                <Grid item className="plan-logo">
-                  <img
-                    src="/images/boursorama_banque_carre.png"
-                    alt="boursorama_banque"
-                  />
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="h4"
-                    component="h2"
-                    align="center"
-                    style={{
-                      marginTop: "1rem",
-                      fontWeight: 500,
-                      fontSize: "1.5rem",
-                      color: "#17a2b8",
-                    }}
-                  >
-                    Bon plan bank name
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="body1"
-                    align="center"
-                    style={{ margin: "16px 0px" }}
-                  >
-                    Lorem ipsum small descritpion
-                  </Typography>
-                </Grid>
-                <Grid item style={{ paddingBottom: "3rem" }}>
-                  <Button variant="contained" color="primary">
-                    Consulter le plan
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Container>
-      </Fade>
+          </Container>
+        </Fade>
       </Container>
     </Layout>
   );
