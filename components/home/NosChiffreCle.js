@@ -57,6 +57,7 @@ const NosChiffreCle = () => {
         justify={matches ? "center" : "space-around"}
         spacing={matches ? 2 : 8}
         className="element"
+        style={{ marginBottom: "6em", }}
       >
         <VisibilitySensor
           onChange={onVisibilityChange}

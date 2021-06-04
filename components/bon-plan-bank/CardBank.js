@@ -15,7 +15,7 @@ const CardBank = ({ card }) => {
         display: "flex",
       }}
     >
-      <Grid component="div" container direction="column" className="plan-card">
+      <Grid component="div" container direction="column" className="plan-card" style={{ marginBottom: "6em", }}>
         <Grid item className="plan-logo">
           <img src={card.imageUrl} alt="boursorama_banque" />
         </Grid>
