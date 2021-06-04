@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { dummyDataDetail } from "./dummyData";
 import { Container, Grid, Typography } from "@material-ui/core";
 
-const BankDetail = ({ data }) => {
+const BankDetail = () => {
   const { query } = useRouter();
   console.log(query.title);
 
