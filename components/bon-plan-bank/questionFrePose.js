@@ -44,16 +44,6 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "none",
     backgroundColor: "#17a2b8",
     marginTop: "1rem",
-    // '&:after': {
-    //     content: "''",
-    //     position: 'absolute',
-    //     borderLeft: "4px solid white",
-    //     zIndex: 100,
-    //     top: -0,
-    //     height: "2.9rem",
-    //     borderRadius: "55%"
-
-    // }
   },
   secondGrid: {
     marginLeft: "5rem",
@@ -109,7 +99,7 @@ export const QuestionFrePose = () => {
             <Box
               borderLeft={3}
               color="secondary.main"
-              borderRadius={16}
+            //   borderRadius={16}
               className={classes.box}
             >
               <Accordion className={classes.accordion}>
@@ -143,143 +133,151 @@ export const QuestionFrePose = () => {
           </Grid>
 
           <Grid item xs={12} className={classes.containerAccordion}>
-              <Box borderLeft={3} color="secondary.main" borderRadius={16} className={classes.box}>
-                <Accordion className={classes.accordion}>
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography
-                      className={{}}
-                      className={classes.titleAccordion}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod ?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionDetails}>
-                    <Typography align="justify">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck
-                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                      tempor, sunt aliqua put a bird on it squid single-origin
-                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident. Ad vegan excepteur butcher vice
-                      lomo. Leggings occaecat craft beer farm-to-table, raw
-                      denim aesthetic synth nesciunt you probably haven't heard
-                      of them accusamus labore sustainable VHS.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </Box>
+            <Box
+              borderLeft={3}
+              color="secondary.main"
+            //   borderRadius={16}
+              className={classes.box}
+            >
+              <Accordion className={classes.accordion}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={{}} className={classes.titleAccordion}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod ?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <Typography align="justify">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee
+                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim
+                    aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Box>
           </Grid>
 
           <Grid item xs={12} className={classes.containerAccordion}>
-              <Box borderLeft={3} color="secondary.main" borderRadius={16} className={classes.box}>
-                <Accordion className={classes.accordion}>
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography
-                      className={{}}
-                      className={classes.titleAccordion}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod ?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionDetails}>
-                    <Typography align="justify">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck
-                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                      tempor, sunt aliqua put a bird on it squid single-origin
-                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident. Ad vegan excepteur butcher vice
-                      lomo. Leggings occaecat craft beer farm-to-table, raw
-                      denim aesthetic synth nesciunt you probably haven't heard
-                      of them accusamus labore sustainable VHS.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </Box>
+            <Box
+              borderLeft={3}
+              color="secondary.main"
+            //   borderRadius={16}
+              className={classes.box}
+            >
+              <Accordion className={classes.accordion}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={{}} className={classes.titleAccordion}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod ?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <Typography align="justify">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee
+                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim
+                    aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Box>
           </Grid>
 
           <Grid item xs={12} className={classes.containerAccordion}>
-              <Box borderLeft={3} color="secondary.main" borderRadius={16} className={classes.box}>
-                <Accordion className={classes.accordion}>
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography
-                      className={{}}
-                      className={classes.titleAccordion}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod ?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionDetails}>
-                    <Typography align="justify">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck
-                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                      tempor, sunt aliqua put a bird on it squid single-origin
-                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident. Ad vegan excepteur butcher vice
-                      lomo. Leggings occaecat craft beer farm-to-table, raw
-                      denim aesthetic synth nesciunt you probably haven't heard
-                      of them accusamus labore sustainable VHS.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </Box>
+            <Box
+              borderLeft={3}
+              color="secondary.main"
+            //   borderRadius={16}
+              className={classes.box}
+            >
+              <Accordion className={classes.accordion}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={{}} className={classes.titleAccordion}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod ?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <Typography align="justify">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee
+                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim
+                    aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Box>
           </Grid>
 
           <Grid item xs={12} className={classes.containerAccordion}>
-              <Box borderLeft={3} color="secondary.main" borderRadius={16} className={classes.box}>
-                <Accordion className={classes.accordion}>
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography
-                      className={{}}
-                      className={classes.titleAccordion}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod ?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionDetails}>
-                    <Typography align="justify">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck
-                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                      tempor, sunt aliqua put a bird on it squid single-origin
-                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident. Ad vegan excepteur butcher vice
-                      lomo. Leggings occaecat craft beer farm-to-table, raw
-                      denim aesthetic synth nesciunt you probably haven't heard
-                      of them accusamus labore sustainable VHS.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </Box>
+            <Box
+              borderLeft={3}
+              color="secondary.main"
+            //   borderRadius={16}
+              className={classes.box}
+            >
+              <Accordion className={classes.accordion}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={{}} className={classes.titleAccordion}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod ?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <Typography align="justify">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee
+                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim
+                    aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Box>
           </Grid>
         </Grid>
       </Container>

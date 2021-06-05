@@ -1,25 +1,7 @@
-// const withImages = require('next-images')
-// module.exports = withImages()
 
-// const withPlugins = require("next-compose-plugins");
-// const webpack = require("webpack");
-// module.exports = withPlugins([withImages], {
-// webpack: (config) => {
-// config.node = {
-// fs: "empty",
-// };
-// config.module.rules.push({
-// test: /\.(glb|gltf|bin)$/,
-// use: {
-// loader: "file-loader",
-// },
-// });
-// config.plugins.push(
-// new webpack.ProvidePlugin({
-// $: "jquery",
-// jQuery: "jquery",
-// "window.jQuery": "jquery",
-// }));
-// return config;
-// },
-// });
+module.exports = {
+     env: {
+        //  DB_LOCAL_URI: "mongodb+srv://bacale:strongest@devconnectot.k4fec.mongodb.net/dealoklmDB?retryWrites=true&w=majority"
+         DB_LOCAL_URI: "mongodb://localhost:27017/dealoklmDB"
+     }
+}
