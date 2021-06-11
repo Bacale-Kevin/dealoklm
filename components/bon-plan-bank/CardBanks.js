@@ -103,27 +103,11 @@ const options = {
   },
 };
 
-export default function BonPlan() {
+export default function CardBanks() {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <Container style={{ marginBottom: "8rem" }}>
-      <Container maxWidth="xl">
-        <Grid container justify="center">
-          <Grid item xs={12} style={{ padding: " 6rem 0rem" }}>
-            <Typography
-              align="center"
-              variant="h1"
-              color="textPrimary"
-              className={classes.bonPlanTitle}
-            >
-              BON PLANS
-            </Typography>
-          </Grid>
-        </Grid>
-      </Container>
-
       <Container maxWidth="xl">
         <OwlCarousel
           {...options}
@@ -147,53 +131,54 @@ export default function BonPlan() {
           // nav
           style={{ paddingBottom: 20 }}
         >
-          <Card className={classes.root}>
-            <Link href="/bon_plan_bank">
-              <a>
-                <Image
-                  src="/images/Group 9.png"
-                  height={270}
-                  width={300}
-                  priority={true}
-                />
-                <Grid container direction="column" alignItems="center" spacing={2}>
-                  <Grid item>
-                    <Typography
-                      align="center"
-                      variant="h5"
-                      component="h2"
-                      className={classes.cardTitle}
-                    >
-                      BON PLANS BANQUES
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={10}>
-                    <Typography
-                      variant="body2"
-                      align="center"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Lizards are a widespread group of squamate reptiles, with over
-                      6,000 species.
-                    </Typography>
-                  </Grid>
-                  <Grid item style={{ padding: "2.2rem" }}>
-                    <Button
-                      variant="contained"
-                      size="mediumm"
-                      color="primary"
-                      className={classes.button}
-                    >
-                      <Link href="/bon_plan_bank">
-                        <a>En savoir plus</a>
-                      </Link>
-                    </Button>
-                  </Grid>
-                </Grid>
-              </a>
+          <Grid
+      item
+      md={4}
+      xs={12}
+      sm={6}
+      style={{
+        textAlign: "center",
+        justifyContent: "center",
+        display: "flex",
+      }}
+    >
+      <Grid component="div" container direction="column" className="plan-card" style={{ marginBottom: "6em", }}>
+        <Grid item className="plan-logo">
+          <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" />
+        </Grid>
+        <Grid item>
+          <Typography
+            variant="h4"
+            component="h2"
+            align="center"
+            style={{
+              marginTop: "1rem",
+              fontWeight: 500,
+              fontSize: "1.5rem",
+              color: "#17a2b8",
+            }}
+          >
+            Boursoroma
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography
+            variant="body1"
+            align="center"
+            style={{ margin: "16px 0px" }}
+          >
+            Boursoroma
+          </Typography>
+        </Grid>
+        <Grid item style={{ paddingBottom: "3rem" }}>
+          <Button variant="contained" color="primary">
+            <Link href={``}>
+              <a>CONSULTER LE BON PLAN</a>
             </Link>
-          </Card>
+          </Button>
+        </Grid>
+      </Grid>
+    </Grid>
 
           <Link href="/bon_plan_mobile">
             <a>

@@ -5,7 +5,37 @@ import Layout from "components/layout/Layout";
 import Fade from "react-reveal/Fade";
 import Image from "next/image";
 import { dummyData } from "./dummyData";
-import CardBank from "./CardBank";
+import CardBanks from "./CardBank";
+
+import dynamic from "next/dynamic";
+
+const OwlCarousel = dynamic(import("react-owl-carousel"), {
+  ssr: false,
+});
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+
+const options = {
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    768: {
+      items: 2,
+    },
+    1000: {
+      items: 3,
+      nav: true,
+    },
+    1200: {
+      items: 3,
+      nav: true,
+    },
+  },
+};
 
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
@@ -19,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       marginBottom: "0em",
+    },
+  },
+  carousel: {
+    "& .owl-stage-outer": {
+      paddingBottom: 20,
     },
   },
   container: {
@@ -63,6 +98,29 @@ const HeroSectionBank = () => {
       </Container>
 
       {/* bank card */}
+      {/* <OwlCarousel
+      {...options}
+      items={3}
+      center
+      // dotsEach={true}
+      className={`${classes.carousel} owl-theme`}
+      autoplay={true}
+      loop={true}
+      startPosition={1}
+      margin={50}
+      stagePadding={40}
+      slideBy={1}
+      autoplayTimeout={3000}
+      autoplayHoverPause
+      dots
+      navText={[
+        '<i class="fas fa-arrow-left" style="position: absolute; left: -2rem; bottom: 22rem; "></i>',
+        '<i class="fas fa-arrow-right" style="position: absolute; right: -2rem; bottom: 22rem;"></i>',
+      ]}
+      // nav
+      style={{ paddingBottom: 20 }}
+    > */}
+      
       <Container
         maxWidth="xl"
         className="card-section"
@@ -72,13 +130,15 @@ const HeroSectionBank = () => {
           <Container className="container" maxWidth="md">
             <Grid container justify="center" spacing={8} alignItems="center">
               {dummyData.map((card) => (
-                <CardBank key={card.id} card={card} />
+                <CardBanks key={card.id} card={card} />
               ))}
             </Grid>
           </Container>
         </Fade>
       </Container>
+      {/* </OwlCarousel> */}
     </Layout>
+
   );
 };
 
