@@ -100,7 +100,7 @@ const HeroSectionBank = ({ bonplanLists }) => {
       </Container>
 
       <Fade right delay={200} duration={1500} style={{ overflowX: "hidden" }}>
-        <CardBanks bonplanLists={bonplanLists} />
+        <CarSdBanks bonplanLists={bonplanLists} />
       </Fade>
 
     </Layout>
