@@ -19,6 +19,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { pink } from "@material-ui/core/colors";
 
+import bonplan from './data/bonplan'
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 300,
@@ -87,13 +88,13 @@ const options = {
       items: 1,
     },
     600: {
-      items: 2,
+      items: 1,
     },
     768: {
-      items: 2,
+      items: 1,
     },
     1000: {
-      items: 3,
+      items: 2,
       nav: true,
     },
     1200: {
@@ -120,9 +121,9 @@ export default function CardBanks() {
           autoplay={true}
           loop={true}
           startPosition={1}
-          margin={150}
+          margin={90}
           stagePadding={50}
-          slideBy={1}
+          slideBy={2}
           autoplayTimeout={5000}
           autoplayHoverPause
           dots
@@ -133,162 +134,54 @@ export default function CardBanks() {
           // nav
           style={{ paddingBottom: 20 }}
         >
-          <Link href="">
-            <a>
-              <Grid component="div" container direction="column" className="plan-card" justifyContent="flex-end" style={{ marginBottom: "6em", }}>
-                <Grid item className="plan-logo">
-                  <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" style={{ width: 150, height: 150, margin: "0px auto" }} />
+          {
+            bonplan.map(data => (
+              <Link href={`${data.path}/${data.slug}`} key={data.id}>
+              <a>
+                <Grid component="div" container direction="column" className="plan-card" justifyContent="flex-end" style={{ marginBottom: "6em", }}>
+                  <Grid item className="plan-logo">
+                    <img src={data.imageUrl} alt={data.title} style={{ width: 150, height: 150, margin: "0px auto" }} />
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      variant="h4"
+                      component="h2"
+                      align="center"
+                      style={{
+                        marginTop: "1rem",
+                        fontWeight: 500,
+                        fontSize: "1.5rem",
+                        color: "#17a2b8",
+                      }}
+                    >
+                      {data.title}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      variant="body1"
+                      align="center"
+                      style={{ margin: "16px 0px" }}
+                    >
+                      {data.desc}
+                    </Typography>
+                  </Grid>
+                  <Grid item style={{ paddingBottom: "3rem", display: "flex", justifyContent: "center" }}>
+                    <Button variant="contained" color="primary">
+                      <Link href={`${data.path}/${data.slug}`}>
+                        <a>{data.btnText}</a>
+                      </Link>
+                    </Button>
+                  </Grid>
                 </Grid>
-                <Grid item>
-                  <Typography
-                    variant="h4"
-                    component="h2"
-                    align="center"
-                    style={{
-                      marginTop: "1rem",
-                      fontWeight: 500,
-                      fontSize: "1.5rem",
-                      color: "#17a2b8",
-                    }}
-                  >
-                    Boursoroma
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography
-                    variant="body1"
-                    align="center"
-                    style={{ margin: "16px 0px" }}
-                  >
-                    Lorem ipsum small <descritpion></descritpion>
-                  </Typography>
-                </Grid>
-                <Grid item style={{ paddingBottom: "3rem", display: "flex", justifyContent: "center" }}>
-                  <Button variant="contained" color="primary">
-                    {/* <Link href={`${card.path}/${card.title}`}> */}
-                    <Link href="">
-                      <a>Consulter le plan</a>
-                    </Link>
-                  </Button>
-                </Grid>
-              </Grid>
-            </a>
-          </Link>
+              </a>
+            </Link>
+            ))
+          }
+         
 
 
-          <Grid component="div" container direction="column" className="plan-card" style={{ marginBottom: "6em", }}>
-            <Grid item className="plan-logo">
-              <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" style={{ width: 150, height: 150, margin: "0px auto" }} />
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="h4"
-                component="h2"
-                align="center"
-                style={{
-                  marginTop: "1rem",
-                  fontWeight: 500,
-                  fontSize: "1.5rem",
-                  color: "#17a2b8",
-                }}
-              >
-                Boursoroma
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="body1"
-                align="center"
-                style={{ margin: "16px 0px" }}
-              >
-                Lorem ipsum small <descritpion></descritpion>
-              </Typography>
-            </Grid>
-            <Grid item style={{ paddingBottom: "3rem", display: "flex", justifyContent: "center" }}>
-              <Button variant="contained" color="primary">
-                {/* <Link href={`${card.path}/${card.title}`}> */}
-                <Link href="">
-                  <a>Consulter le plan</a>
-                </Link>
-              </Button>
-            </Grid>
-          </Grid>
-
-          <Grid component="div" container direction="column" className="plan-card" style={{ marginBottom: "6em", }}>
-            <Grid item className="plan-logo">
-              <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" style={{ width: 150, height: 150, margin: "0px auto" }} />
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="h4"
-                component="h2"
-                align="center"
-                style={{
-                  marginTop: "1rem",
-                  fontWeight: 500,
-                  fontSize: "1.5rem",
-                  color: "#17a2b8",
-                }}
-              >
-                Boursoroma
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="body1"
-                align="center"
-                style={{ margin: "16px 0px" }}
-              >
-                Lorem ipsum small <descritpion></descritpion>
-              </Typography>
-            </Grid>
-            <Grid item style={{ paddingBottom: "3rem", display: "flex", justifyContent: "center" }}>
-              <Button variant="contained" color="primary">
-                {/* <Link href={`${card.path}/${card.title}`}> */}
-                <Link href="">
-                  <a>Consulter le plan</a>
-                </Link>
-              </Button>
-            </Grid>
-          </Grid>
-
-          <Grid component="div" container direction="column" className="plan-card" style={{ marginBottom: "6em", }}>
-            <Grid item className="plan-logo">
-              <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" style={{ width: 150, height: 150, margin: "0px auto" }} />
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="h4"
-                component="h2"
-                align="center"
-                style={{
-                  marginTop: "1rem",
-                  fontWeight: 500,
-                  fontSize: "1.5rem",
-                  color: "#17a2b8",
-                }}
-              >
-                Boursoroma
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="body1"
-                align="center"
-                style={{ margin: "16px 0px" }}
-              >
-                Lorem ipsum small <descritpion></descritpion>
-              </Typography>
-            </Grid>
-            <Grid item style={{ paddingBottom: "3rem", display: "flex", justifyContent: "center" }}>
-              <Button variant="contained" color="primary">
-                {/* <Link href={`${card.path}/${card.title}`}> */}
-                <Link href="">
-                  <a>Consulter le plan</a>
-                </Link>
-              </Button>
-            </Grid>
-          </Grid>
+          
         </OwlCarousel>
       </Container>
     </Container>

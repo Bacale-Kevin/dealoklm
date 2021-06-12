@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "/images/boursorama_banque_carre.png",
+    "slug": "boursoroma",
+    "title": "Boursoroma",
+    "desc": "Lorem ipsum small descritpion",
+    "btnText": "Consulter le plan",
+    "path": "/bon_plan_bank"
+  },
+  {
+    "id": 2,
+    "imageUrl": "/images/logo-facebook.png",
+    "slug": "afriland-first-bank",
+    "title": "Afriland First Bank",
+    "desc": "Lorem ipsum small descritpion",
+    "btnText": "Consulter le plan",
+    "path": "/bon_plan_bank"
+  },
+  {
+    "id": 3,
+    "imageUrl": "/images/unnamed.png",
+    "title": "Central bank",
+    "slug": "central-bank",
+    "desc": "Lorem ipsum small descritpion",
+    "btnText": "Consulter le plan",
+    "path": "/bon_plan_bank"
+  },
+  {
+    "id": 4,
+    "imageUrl": "/images/boursorama_banque_carre.png",
+    "slug": "boursoroma",
+    "title": "Bank Central de France",
+    "desc": "Lorem ipsum small descritpion",
+    "btnText": "Consulter le plan",
+    "path": "/bon_plan_bank"
+  },
+  {
+    "id": 5,
+    "imageUrl": "/images/logo-facebook.png",
+    "slug": "boursoroma",
+    "title": "United Emirates Bank",
+    "desc": "Lorem ipsum small descritpion",
+    "btnText": "Consulter le plan",
+    "path": "/bon_plan_bank"
+  },
+  {
+    "id": 6,
+    "imageUrl": "/images/unnamed.png",
+    "title": "Standard Chartered",
+    "desc": "Lorem ipsum small descritpion",
+    "btnText": "Consulter le plan",
+    "path": "/bon_plan_bank"
+  }
+]
