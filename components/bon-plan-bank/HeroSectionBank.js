@@ -77,7 +77,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const HeroSectionBank = ({ bonplanLists }) => {
-
   const classes = useStyles();
   const theme = useTheme();
   return (
@@ -99,8 +98,9 @@ const HeroSectionBank = ({ bonplanLists }) => {
         </Container>
       </Container>
 
-      <Fade right delay={200} duration={1500} style={{ overflowX: "hidden" }}>
-        <CarSdBanks bonplanLists={bonplanLists} />
+      {/* Carousel */}
+      <Fade right delay={700} duration={1500}>
+        <CardBanks bonplanLists={bonplanLists} />
       </Fade>
 
     </Layout>

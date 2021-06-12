@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const QuestionFrePose = () => {
+export const QuestionFrePose = ({ bonplanDetails }) => {
   const classes = useStyles();
   return (
     <Container maxWidth="xl" className={classes.container}>
@@ -91,7 +91,7 @@ export const QuestionFrePose = () => {
         <Grid container direction="column">
           <Grid item className={classes.titleContainer}>
             <Typography className={classes.title}>
-              Questions fréquament posées
+              {bonplanDetails.questionPose}
             </Typography>
           </Grid>
 
@@ -99,7 +99,7 @@ export const QuestionFrePose = () => {
             <Box
               borderLeft={3}
               color="secondary.main"
-            //   borderRadius={16}
+              //   borderRadius={16}
               className={classes.box}
             >
               <Accordion className={classes.accordion}>
@@ -109,23 +109,12 @@ export const QuestionFrePose = () => {
                   id="panel1a-header"
                 >
                   <Typography className={{}} className={classes.titleAccordion}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod ?
+                    {bonplanDetails.question1}
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails className={classes.accordionDetails}>
                   <Typography align="justify">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch. Food truck
-                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                    sunt aliqua put a bird on it squid single-origin coffee
-                    nulla assumenda shoreditch et. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                    Leggings occaecat craft beer farm-to-table, raw denim
-                    aesthetic synth nesciunt you probably haven't heard of them
-                    accusamus labore sustainable VHS.
+                    {bonplanDetails.reponse1}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -136,7 +125,7 @@ export const QuestionFrePose = () => {
             <Box
               borderLeft={3}
               color="secondary.main"
-            //   borderRadius={16}
+              //   borderRadius={16}
               className={classes.box}
             >
               <Accordion className={classes.accordion}>
@@ -146,23 +135,12 @@ export const QuestionFrePose = () => {
                   id="panel1a-header"
                 >
                   <Typography className={{}} className={classes.titleAccordion}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod ?
+                    {bonplanDetails.question2}
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails className={classes.accordionDetails}>
                   <Typography align="justify">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch. Food truck
-                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                    sunt aliqua put a bird on it squid single-origin coffee
-                    nulla assumenda shoreditch et. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                    Leggings occaecat craft beer farm-to-table, raw denim
-                    aesthetic synth nesciunt you probably haven't heard of them
-                    accusamus labore sustainable VHS.
+                    {bonplanDetails.reponse2}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -173,7 +151,7 @@ export const QuestionFrePose = () => {
             <Box
               borderLeft={3}
               color="secondary.main"
-            //   borderRadius={16}
+              //   borderRadius={16}
               className={classes.box}
             >
               <Accordion className={classes.accordion}>
@@ -183,23 +161,12 @@ export const QuestionFrePose = () => {
                   id="panel1a-header"
                 >
                   <Typography className={{}} className={classes.titleAccordion}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod ?
+                    {bonplanDetails.question3}
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails className={classes.accordionDetails}>
                   <Typography align="justify">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch. Food truck
-                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                    sunt aliqua put a bird on it squid single-origin coffee
-                    nulla assumenda shoreditch et. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                    Leggings occaecat craft beer farm-to-table, raw denim
-                    aesthetic synth nesciunt you probably haven't heard of them
-                    accusamus labore sustainable VHS.
+                    {bonplanDetails.reponse3}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -210,7 +177,7 @@ export const QuestionFrePose = () => {
             <Box
               borderLeft={3}
               color="secondary.main"
-            //   borderRadius={16}
+              //   borderRadius={16}
               className={classes.box}
             >
               <Accordion className={classes.accordion}>
@@ -220,23 +187,12 @@ export const QuestionFrePose = () => {
                   id="panel1a-header"
                 >
                   <Typography className={{}} className={classes.titleAccordion}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod ?
+                    {bonplanDetails.question4}
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails className={classes.accordionDetails}>
                   <Typography align="justify">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch. Food truck
-                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                    sunt aliqua put a bird on it squid single-origin coffee
-                    nulla assumenda shoreditch et. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                    Leggings occaecat craft beer farm-to-table, raw denim
-                    aesthetic synth nesciunt you probably haven't heard of them
-                    accusamus labore sustainable VHS.
+                    {bonplanDetails.reponse4}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -247,7 +203,7 @@ export const QuestionFrePose = () => {
             <Box
               borderLeft={3}
               color="secondary.main"
-            //   borderRadius={16}
+              //   borderRadius={16}
               className={classes.box}
             >
               <Accordion className={classes.accordion}>
@@ -257,23 +213,12 @@ export const QuestionFrePose = () => {
                   id="panel1a-header"
                 >
                   <Typography className={{}} className={classes.titleAccordion}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod ?
+                    {bonplanDetails.question5}
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails className={classes.accordionDetails}>
                   <Typography align="justify">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch. Food truck
-                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                    sunt aliqua put a bird on it squid single-origin coffee
-                    nulla assumenda shoreditch et. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                    Leggings occaecat craft beer farm-to-table, raw denim
-                    aesthetic synth nesciunt you probably haven't heard of them
-                    accusamus labore sustainable VHS.
+                    {bonplanDetails.reponse5}
                   </Typography>
                 </AccordionDetails>
               </Accordion>

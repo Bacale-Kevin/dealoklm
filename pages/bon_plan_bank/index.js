@@ -12,7 +12,7 @@ const BonPlanBank = ({ bonplanLists }) => {
 
 export default BonPlanBank;
 
-export const getStaticProps = async () => {
+export async function getStaticProps () {
   return {
     props: {
       bonplanLists: bonplan,
