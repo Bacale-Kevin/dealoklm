@@ -1,16 +1,21 @@
-import React from 'react'
-import HeroSectionBank from 'components/bon-plan-bank/HeroSectionBank';
-import CarouselSection from 'components/bon-plan-bank/CarouselSection';
+import React from "react";
+import HeroSectionBank from "components/bon-plan-bank/HeroSectionBank";
+import bonplan from "../../components/bon-plan-bank/data/bonplan";
 
+const BonPlanBank = ({ bonplanLists }) => {
+  return (
+    <>
+      <HeroSectionBank bonplanLists={bonplanLists} />
+    </>
+  );
+};
 
+export default BonPlanBank;
 
-
-const BonPlanBank = () => {
-    return (
-        <>
-            <HeroSectionBank />
-        </>
-    )
-}
-
-export default BonPlanBank
+export const getStaticProps = async () => {
+  return {
+    props: {
+      bonplanLists: bonplan,
+    },
+  };
+};

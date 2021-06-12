@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.25em",
     color: theme.palette.secondary.main,
     "&:hover": {
-      color: theme.palette.info.main,
+      color: theme.palette.secondary.dark,
     },
   },
 }));

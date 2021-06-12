@@ -21,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.25em",
     color: "#fff",
     "&:hover": {
-      color: theme.palette.info.main,
+      color: theme.palette.secondary.dark,
     },
   },
   copylight: {
     color: "#fff",
     fontSize: "1em",
     "&:hover": {
-      color: theme.palette.info.main,
+      color: theme.palette.secondary.dark,
     },
   },
 }));

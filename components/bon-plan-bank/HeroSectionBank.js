@@ -76,7 +76,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const HeroSectionBank = () => {
+const HeroSectionBank = ({ bonplanLists }) => {
+
   const classes = useStyles();
   const theme = useTheme();
   return (
@@ -98,51 +99,10 @@ const HeroSectionBank = () => {
         </Container>
       </Container>
 
-      <CardBanks />
-      {/* <CarouselSection /> */}
-      {/* <MultiCarousel /> */}
+      <Fade right delay={200} duration={1500} style={{ overflowX: "hidden" }}>
+        <CardBanks bonplanLists={bonplanLists} />
+      </Fade>
 
-      {/* bank card */}
-      {/* <OwlCarousel
-      {...options}
-      items={3}
-      center
-      // dotsEach={true}
-      className={`${classes.carousel} owl-theme`}
-      autoplay={true}
-      loop={true}
-      startPosition={1}
-      margin={50}
-      stagePadding={40}
-      slideBy={1}
-      autoplayTimeout={3000}
-      autoplayHoverPause
-      dots
-      navText={[
-        '<i class="fas fa-arrow-left" style="position: absolute; left: -2rem; bottom: 22rem; "></i>',
-        '<i class="fas fa-arrow-right" style="position: absolute; right: -2rem; bottom: 22rem;"></i>',
-      ]}
-      // nav
-      style={{ paddingBottom: 20 }}
-    > */}
-
-      {/* <Container
-        maxWidth="xl"
-        className="card-section"
-        style={{ backgroundColor: "#FBFFFF", marginTop: "-14rem" }}
-      >
-        <Fade delay={500} duration={2000} bottom>
-          <Container className="container" maxWidth="md">
-            <Grid container justify="center" spacing={8} alignItems="center">
-              {dummyData.map((card) => (
-                <CardBanks key={card.id} card={card} />
-              ))}
-              <CardBanks />
-            </Grid>
-          </Container>
-        </Fade>
-      </Container> */}
-      {/* </OwlCarousel> */}
     </Layout>
 
   );
