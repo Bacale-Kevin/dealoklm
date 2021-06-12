@@ -5,7 +5,7 @@ import Layout from "components/layout/Layout";
 import Fade from "react-reveal/Fade";
 import Image from "next/image";
 import { dummyData } from "./dummyData";
-import CardBanks from "./CardBank";
+import CardBanks from "./CardBanks";
 
 import dynamic from "next/dynamic";
 
@@ -15,6 +15,7 @@ const OwlCarousel = dynamic(import("react-owl-carousel"), {
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
+import CarouselSection from 'components/bon-plan-bank/CarouselSection';
 const options = {
   responsive: {
     0: {
@@ -97,6 +98,10 @@ const HeroSectionBank = () => {
         </Container>
       </Container>
 
+      <CardBanks />
+      {/* <CarouselSection /> */}
+      {/* <MultiCarousel /> */}
+
       {/* bank card */}
       {/* <OwlCarousel
       {...options}
@@ -120,8 +125,8 @@ const HeroSectionBank = () => {
       // nav
       style={{ paddingBottom: 20 }}
     > */}
-      
-      <Container
+
+      {/* <Container
         maxWidth="xl"
         className="card-section"
         style={{ backgroundColor: "#FBFFFF", marginTop: "-14rem" }}
@@ -132,10 +137,11 @@ const HeroSectionBank = () => {
               {dummyData.map((card) => (
                 <CardBanks key={card.id} card={card} />
               ))}
+              <CardBanks />
             </Grid>
           </Container>
         </Fade>
-      </Container>
+      </Container> */}
       {/* </OwlCarousel> */}
     </Layout>
 

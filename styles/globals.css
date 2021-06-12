@@ -24,12 +24,17 @@ a {
 	box-shadow: 0 3px 5px rgba(0,0,0,.075);
 	/* margin: 20px; */
   /* width: 2em; */
-  max-width: 23em;
+  max-width: 20em;
 }
 
 .plan-card:hover .plan-logo img {
 	transform: scale(1.08);
 }
+
+/* .logoImage{
+	width: 350px;
+	height: 350px;
+} */
 
 .plan-logo{
   padding-top: 2rem;
@@ -48,7 +53,7 @@ a {
 	bottom: 0px;
   top: 210px;
   margin-top: 8px;
-  left: 65px;
+  left: 70px;
 	height: 1px;
 	width: 50%;
   transform: scaleX(1); 

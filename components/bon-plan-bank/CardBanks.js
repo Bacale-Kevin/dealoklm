@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
   },
   carousel: {
     "& .owl-stage-outer": {
-      paddingBottom: 20,
+      paddingBottom: -20,
     },
   },
   bonPlanTitle: {
@@ -105,216 +105,190 @@ const options = {
 
 export default function CardBanks() {
   const classes = useStyles();
+  const theme = useTheme();
 
   return (
-    <Container style={{ marginBottom: "8rem" }}>
-      <Container maxWidth="xl">
+    <Container style={{ marginBottom: "8rem", maxHeight: "50vh" }}>
+
+      <Container maxWidth="xl" style={{ position: "relative", top: "-10rem", overflowX: "hidden", }}>
         <OwlCarousel
           {...options}
           items={3}
           center
-          // dotsEach={true}
+          dotsEach={true}
           className={`${classes.carousel} owl-theme`}
           autoplay={true}
           loop={true}
           startPosition={1}
-          margin={50}
-          stagePadding={40}
+          margin={150}
+          stagePadding={50}
           slideBy={1}
-          autoplayTimeout={3000}
+          autoplayTimeout={5000}
           autoplayHoverPause
           dots
           navText={[
-            '<i class="fas fa-arrow-left" style="position: absolute; left: -2rem; bottom: 22rem; "></i>',
-            '<i class="fas fa-arrow-right" style="position: absolute; right: -2rem; bottom: 22rem;"></i>',
+            '<i class="fas fa-arrow-left" style="position: absolute; left: -1.5rem; bottom: 25rem; "></i>',
+            '<i class="fas fa-arrow-right" style="position: absolute; right: -1.5rem; bottom: 25rem;"></i>',
           ]}
           // nav
           style={{ paddingBottom: 20 }}
         >
-          <Grid
-      item
-      md={4}
-      xs={12}
-      sm={6}
-      style={{
-        textAlign: "center",
-        justifyContent: "center",
-        display: "flex",
-      }}
-    >
-      <Grid component="div" container direction="column" className="plan-card" style={{ marginBottom: "6em", }}>
-        <Grid item className="plan-logo">
-          <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" />
-        </Grid>
-        <Grid item>
-          <Typography
-            variant="h4"
-            component="h2"
-            align="center"
-            style={{
-              marginTop: "1rem",
-              fontWeight: 500,
-              fontSize: "1.5rem",
-              color: "#17a2b8",
-            }}
-          >
-            Boursoroma
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Typography
-            variant="body1"
-            align="center"
-            style={{ margin: "16px 0px" }}
-          >
-            Boursoroma
-          </Typography>
-        </Grid>
-        <Grid item style={{ paddingBottom: "3rem" }}>
-          <Button variant="contained" color="primary">
-            <Link href={``}>
-              <a>CONSULTER LE BON PLAN</a>
-            </Link>
-          </Button>
-        </Grid>
-      </Grid>
-    </Grid>
-
-          <Link href="/bon_plan_mobile">
+          <Link href="">
             <a>
-              <Card className={classes.root}>
-                <Image
-                  src="/images/Group 161.png"
-                  height={270}
-                  width={300}
-                  priority={true}
-                />
-                <Grid container direction="column" alignItems="center" spacing={2}>
-                  <Grid item>
-                    <Typography
-                      align="center"
-                      variant="h5"
-                      component="h2"
-                      className={classes.cardTitle}
-                    >
-                      BON PLANS MOBILE
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={10}>
-                    <Typography
-                      variant="body2"
-                      align="center"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Lizards are a widespread group of squamate reptiles, with over
-                      6,000 species.
-                    </Typography>
-                  </Grid>
-                  <Grid item style={{ padding: "2.2rem" }}>
-                    <Link href="/bon_plan_mobile">
-                      <a>
-                        <Button
-                          variant="contained"
-                          size="medium"
-                          className={classes.buttonApartement}
-                        >
-                          En savoir plus
-                        </Button>
-                      </a>
+              <Grid component="div" container direction="column" className="plan-card" justifyContent="flex-end" style={{ marginBottom: "6em", }}>
+                <Grid item className="plan-logo">
+                  <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" style={{ width: 150, height: 150, margin: "0px auto" }} />
+                </Grid>
+                <Grid item>
+                  <Typography
+                    variant="h4"
+                    component="h2"
+                    align="center"
+                    style={{
+                      marginTop: "1rem",
+                      fontWeight: 500,
+                      fontSize: "1.5rem",
+                      color: "#17a2b8",
+                    }}
+                  >
+                    Boursoroma
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography
+                    variant="body1"
+                    align="center"
+                    style={{ margin: "16px 0px" }}
+                  >
+                    Lorem ipsum small <descritpion></descritpion>
+                  </Typography>
+                </Grid>
+                <Grid item style={{ paddingBottom: "3rem", display: "flex", justifyContent: "center" }}>
+                  <Button variant="contained" color="primary">
+                    {/* <Link href={`${card.path}/${card.title}`}> */}
+                    <Link href="">
+                      <a>Consulter le plan</a>
                     </Link>
-                  </Grid>
+                  </Button>
                 </Grid>
-              </Card>
+              </Grid>
             </a>
           </Link>
 
-          <Link href="/bon_plan_energie">
-            <a>
 
-              <Card className={classes.root}>
-                <Image
-                  src="/images/Group 13.png"
-                  height={270}
-                  width={300}
-                  priority={true}
-                />
-                <Grid container direction="column" alignItems="center" spacing={2}>
-                  <Grid item>
-                    <Typography
-                      align="center"
-                      variant="h5"
-                      component="h2"
-                      className={classes.cardTitle}
-                    >
-                      BON PLANS ENERGIES
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={10}>
-                    <Typography
-                      variant="body2"
-                      align="center"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Lizards are a widespread group of squamate reptiles, with over
-                      6,000 species.
-                    </Typography>
-                  </Grid>
-                  <Grid item style={{ padding: "2.2rem" }}>
-                    <Link href="/bon_plan_energie">
-                      <a>
-                        <Button variant="contained" className={classes.buttonEnergy}>
-                          En savoir plus
-                        </Button>
-                      </a>
-                    </Link>
-                  </Grid>
-                </Grid>
-              </Card>
-            </a>
-          </Link>
+          <Grid component="div" container direction="column" className="plan-card" style={{ marginBottom: "6em", }}>
+            <Grid item className="plan-logo">
+              <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" style={{ width: 150, height: 150, margin: "0px auto" }} />
+            </Grid>
+            <Grid item>
+              <Typography
+                variant="h4"
+                component="h2"
+                align="center"
+                style={{
+                  marginTop: "1rem",
+                  fontWeight: 500,
+                  fontSize: "1.5rem",
+                  color: "#17a2b8",
+                }}
+              >
+                Boursoroma
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ margin: "16px 0px" }}
+              >
+                Lorem ipsum small <descritpion></descritpion>
+              </Typography>
+            </Grid>
+            <Grid item style={{ paddingBottom: "3rem", display: "flex", justifyContent: "center" }}>
+              <Button variant="contained" color="primary">
+                {/* <Link href={`${card.path}/${card.title}`}> */}
+                <Link href="">
+                  <a>Consulter le plan</a>
+                </Link>
+              </Button>
+            </Grid>
+          </Grid>
 
-          <Link href="/bon_plan_apartement">
-            <a>
+          <Grid component="div" container direction="column" className="plan-card" style={{ marginBottom: "6em", }}>
+            <Grid item className="plan-logo">
+              <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" style={{ width: 150, height: 150, margin: "0px auto" }} />
+            </Grid>
+            <Grid item>
+              <Typography
+                variant="h4"
+                component="h2"
+                align="center"
+                style={{
+                  marginTop: "1rem",
+                  fontWeight: 500,
+                  fontSize: "1.5rem",
+                  color: "#17a2b8",
+                }}
+              >
+                Boursoroma
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ margin: "16px 0px" }}
+              >
+                Lorem ipsum small <descritpion></descritpion>
+              </Typography>
+            </Grid>
+            <Grid item style={{ paddingBottom: "3rem", display: "flex", justifyContent: "center" }}>
+              <Button variant="contained" color="primary">
+                {/* <Link href={`${card.path}/${card.title}`}> */}
+                <Link href="">
+                  <a>Consulter le plan</a>
+                </Link>
+              </Button>
+            </Grid>
+          </Grid>
 
-              <Card className={classes.root}>
-                <Image
-                  src="/images/Group 11.png"
-                  height={270}
-                  width={300}
-                  priority={true}
-                />
-                <Grid container direction="column" alignItems="center" spacing={2}>
-                  <Grid item>
-                    <Typography align="center" variant="h5">
-                      BON PLANS APARTEMENT
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={10}>
-                    <Typography
-                      variant="body2"
-                      align="center"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Lizards are a widespread group of squamate reptiles, with over
-                      6,000 species.
-                    </Typography>
-                  </Grid>
-                  <Grid item style={{ padding: "2.2rem" }}>
-                    <Button
-                      variant="contained"
-                      size="medium"
-                      className={classes.buttonTel}
-                    >
-                      En savoir plus
-                    </Button>
-                  </Grid>
-                </Grid>
-              </Card>
-            </a>
-          </Link>
+          <Grid component="div" container direction="column" className="plan-card" style={{ marginBottom: "6em", }}>
+            <Grid item className="plan-logo">
+              <img src="/images/boursorama_banque_carre.png" alt="boursorama_banque" style={{ width: 150, height: 150, margin: "0px auto" }} />
+            </Grid>
+            <Grid item>
+              <Typography
+                variant="h4"
+                component="h2"
+                align="center"
+                style={{
+                  marginTop: "1rem",
+                  fontWeight: 500,
+                  fontSize: "1.5rem",
+                  color: "#17a2b8",
+                }}
+              >
+                Boursoroma
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ margin: "16px 0px" }}
+              >
+                Lorem ipsum small <descritpion></descritpion>
+              </Typography>
+            </Grid>
+            <Grid item style={{ paddingBottom: "3rem", display: "flex", justifyContent: "center" }}>
+              <Button variant="contained" color="primary">
+                {/* <Link href={`${card.path}/${card.title}`}> */}
+                <Link href="">
+                  <a>Consulter le plan</a>
+                </Link>
+              </Button>
+            </Grid>
+          </Grid>
         </OwlCarousel>
       </Container>
     </Container>
