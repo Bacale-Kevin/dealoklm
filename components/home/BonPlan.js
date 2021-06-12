@@ -147,9 +147,9 @@ export default function BonPlan() {
           // nav
           style={{ paddingBottom: 20 }}
         >
-          <Card className={classes.root}>
-            <Link href="/bon_plan_bank">
-              <a>
+          <Link href="/bon_plan_bank">
+            <a>
+              <Card className={classes.root}>
                 <Image
                   src="/images/Group 9.png"
                   height={270}
@@ -191,9 +191,9 @@ export default function BonPlan() {
                     </Button>
                   </Grid>
                 </Grid>
-              </a>
-            </Link>
-          </Card>
+              </Card>
+            </a>
+          </Link>
 
           <Link href="/bon_plan_mobile">
             <a>

@@ -20,8 +20,8 @@
   {
     "id": 3,
     "imageUrl": "/images/unnamed.png",
-    "title": "Central bank",
-    "slug": "central-bank",
+    "title": "Boom Planet",
+    "slug": "boom-planet",
     "desc": "Lorem ipsum small descritpion",
     "btnText": "Consulter le plan",
     "path": "/bon_plan_bank"

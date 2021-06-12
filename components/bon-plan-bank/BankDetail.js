@@ -91,6 +91,7 @@ const BankDetail = ({ bonplanDetails }) => {
               <Grid container justify="flex-end">
                 <Grid item>
                   <img
+                    style={{ width: 200, height: 200 }}
                     src={bonplanDetails.imageUrl}
                     alt={bonplanDetails.title}
                   />
