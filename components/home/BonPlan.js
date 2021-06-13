@@ -27,6 +27,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px auto",
     borderRadius: " 0px 0px 3% 3% ",
     transition: "transform 0.15s ease-in-out",
+    [theme.breakpoints.down('xs')]: {
+      minHeight: 400,
+      maxWidth: 400,
+      width: 300,
+
+    }
   },
   image: {
     backgroundRepeat: "no-repeat",
@@ -85,15 +91,24 @@ const options = {
   responsive: {
     0: {
       items: 1,
+      center: false,
+      margin: 0,
+      stagePadding: 0
     },
     600: {
-      items: 2,
+      items: 1  ,
+      center: false
+
     },
-    768: {
+    700: {
       items: 2,
+      // nav: true,
+      center: false
+      
     },
     1000: {
       items: 3,
+      center: false,
       nav: true,
     },
     1200: {
@@ -106,6 +121,7 @@ const options = {
 export default function BonPlan() {
   const classes = useStyles();
   const theme = useTheme();
+  const xs = theme.breakpoints.down('sm')
 
   return (
     <Container style={{ marginBottom: "8rem" }}>
@@ -135,7 +151,7 @@ export default function BonPlan() {
           loop={true}
           startPosition={1}
           margin={50}
-          stagePadding={40}
+          stagePadding={xs ? 0 : 50}
           slideBy={1}
           autoplayTimeout={3000}
           autoplayHoverPause
@@ -147,16 +163,22 @@ export default function BonPlan() {
           // nav
           style={{ paddingBottom: 20 }}
         >
-          <Link href="/bon_plan_bank">
-            <a>
-              <Card className={classes.root}>
+
+          <Card className={classes.root}>
+            <Link href="/bon_plan_bank">
+              <a>
                 <Image
                   src="/images/Group 9.png"
                   height={270}
                   width={300}
                   priority={true}
                 />
-                <Grid container direction="column" alignItems="center" spacing={2}>
+              </a>
+            </Link>
+
+            <Grid container direction="column" alignItems="center" spacing={2}>
+              <Link href="/bon_plan_bank">
+                <a>
                   <Grid item>
                     <Typography
                       align="center"
@@ -167,17 +189,26 @@ export default function BonPlan() {
                       BON PLANS BANQUES
                     </Typography>
                   </Grid>
-                  <Grid item xs={10}>
+                </a>
+              </Link>
+              <Grid item xs={10}>
+                <Link href="/bon_plan_bank">
+                  <a>
                     <Typography
                       variant="body2"
                       align="center"
                       color="textSecondary"
                       component="p"
+                      style={{ marginTop: 12 }}
                     >
                       Lizards are a widespread group of squamate reptiles, with over
                       6,000 species.
                     </Typography>
-                  </Grid>
+                  </a>
+                </Link>
+              </Grid>
+              <Link href="/bon_plan_bank">
+                <a>
                   <Grid item style={{ padding: "2.2rem" }}>
                     <Button
                       variant="contained"
@@ -190,10 +221,11 @@ export default function BonPlan() {
                       </Link>
                     </Button>
                   </Grid>
-                </Grid>
-              </Card>
-            </a>
-          </Link>
+                </a>
+              </Link>
+            </Grid>
+          </Card>
+
 
           <Link href="/bon_plan_mobile">
             <a>

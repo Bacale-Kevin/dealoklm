@@ -75,7 +75,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BankDetail = ({ bonplanDetails }) => {
+const 
+BankDetail = ({ bonplanDetails }) => {
   // console.log(bonplanDetails);
   const classes = useStyles();
   const theme = useTheme();
@@ -85,9 +86,9 @@ const BankDetail = ({ bonplanDetails }) => {
     <>
       <Container maxWidth="xl" style={{ background: "#FBFFFF" }}>
         <div className={classes.toolbarMargin} />
-        <Container maxWidth="lg" style={{ marginTop: "4rem" }}>
+        <Container maxWidth="lg" style={{ marginTop: "4rem" }} >
           <Grid container className={classes.firstGrid}>
-            <Grid item md={3}>
+            <Grid item lg={3}>
               <Grid container justify="flex-end">
                 <Grid item>
                   <img

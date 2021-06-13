@@ -78,12 +78,19 @@ const options = {
   responsive: {
     0: {
       items: 1,
+      center: false,
+      stagePadding: 0,
+      margin: 0
     },
     600: {
       items: 1,
+      center: false,
     },
     768: {
-      items: 1,
+      items: 2,
+      center: false,
+      stagePadding: 0,
+      margin: 30
     },
     1000: {
       items: 2,
@@ -108,13 +115,13 @@ export default function CardBanks({ bonplanLists }) {
         <OwlCarousel
           {...options}
           items={3}
-          center
+          // center
           dotsEach={true}
           className={`${classes.carousel} owl-theme`}
           autoplay={true}
           loop={true}
           startPosition={1}
-          margin={90}
+          margin={70}
           stagePadding={50}
           slideBy={2}
           autoplayTimeout={5000}
